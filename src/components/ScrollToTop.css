@@ -1,0 +1,25 @@
+.scroll-top {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: var(--fab-gradient);
+  color: #fff;
+  box-shadow: 0 14px 32px -12px rgba(245, 158, 11, 0.5);
+}
+
+@media (max-width: 640px) {
+  .scroll-top {
+    bottom: var(--space-5);
+    right: var(--space-5);
+    width: 46px;
+    height: 46px;
+  }
+}

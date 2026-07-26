@@ -1,0 +1,94 @@
+.experience__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.experience__card {
+  display: flex;
+  gap: var(--space-5);
+  padding: var(--space-6);
+}
+
+.experience__icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(16, 185, 129, 0.14);
+  color: #34d399;
+}
+
+html[data-theme='light'] .experience__icon {
+  background: rgba(16, 185, 129, 0.1);
+  color: #047857;
+}
+
+.experience__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.experience__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.experience__title {
+  font-size: 1.3rem;
+}
+
+.experience__duration {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.experience__company {
+  font-weight: 600;
+  color: var(--text-accent-1);
+  margin-bottom: var(--space-4);
+}
+
+.experience__responsibilities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2) var(--space-5);
+}
+
+.experience__responsibilities li {
+  position: relative;
+  padding-left: var(--space-4);
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.experience__responsibilities li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--text-tertiary);
+}
+
+@media (max-width: 640px) {
+  .experience__card {
+    flex-direction: column;
+    padding: var(--space-5);
+  }
+  .experience__responsibilities {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,477 @@
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+
+:root {
+  --font-display: 'Sora', 'Inter', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
+
+  --container-max: 1180px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-xl: 32px;
+  --radius-full: 999px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 180ms var(--ease-out);
+  --transition-med: 320ms var(--ease-out);
+  --transition-slow: 560ms var(--ease-out);
+
+  --nav-height: 80px;
+
+  /* Brand gradient — fresh marine/emerald palette, entirely new hue family */
+  --accent-emerald: #059669;
+  --accent-warm: #f59e0b;
+  --brand-gradient: linear-gradient(120deg, var(--accent-emerald));
+  --fab-gradient: linear-gradient(135deg, #f59e0b, #fb7185);
+}
+
+html[data-theme='dark'] {
+  /* Rich layered dark — never flat black, subtle hue drift top to bottom */
+  --bg: linear-gradient(180deg, #071512 0%, #0a1f1a 45%, #071a1f 100%);
+  --bg-soft: #0a1a17;
+
+  --glass-bg: rgba(232, 255, 248, 0.05);
+  --glass-bg-strong: rgba(232, 255, 248, 0.09);
+  --glass-border: rgba(94, 234, 212, 0.14);
+  --glass-border-strong: rgba(94, 234, 212, 0.26);
+
+  --surface: rgba(232, 255, 248, 0.045);
+  --surface-hover: rgba(232, 255, 248, 0.09);
+
+  --text-primary: #eef8f4;
+  --text-secondary: #cbdcd6;
+  --text-tertiary: #718b83;
+
+  --text-accent-1: #a7f3d0;
+  --text-accent-2: #5eead4;
+  --text-accent-3: #22d3ee;
+
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.45), 0 22px 48px -18px rgba(4, 30, 26, 0.65);
+  --shadow-lift: 0 1px 2px rgba(0, 0, 0, 0.55), 0 32px 64px -20px rgba(4, 30, 26, 0.78);
+
+  --nav-scrim: rgba(7, 21, 18, 0.68);
+  --aurora-opacity: 0.10;
+  --grain-opacity: 0.045;
+
+  
+  
+/* background gradients for each section — subtle tinting to distinguish sections while staying on-brand */
+
+  /* Gradient A - Emerald → Teal */
+--tint-hero: linear-gradient(
+  165deg,
+  rgba(16, 185, 129, 0.22) 0%,
+  rgba(20, 184, 166, 0.14) 100%
+);
+
+/* Gradient B - Cyan → Aqua */
+--tint-summary: linear-gradient(
+  165deg,
+  rgba(34, 211, 238, 0.22) 0%,
+  rgba(6, 182, 212, 0.14) 100%
+);
+
+/* Repeat Gradient A */
+--tint-experience: linear-gradient(
+  165deg,
+  rgba(16, 185, 129, 0.22) 0%,
+  rgba(20, 184, 166, 0.14) 100%
+);
+
+/* Repeat Gradient B */
+--tint-projects: linear-gradient(
+  165deg,
+  rgba(34, 211, 238, 0.22) 0%,
+  rgba(6, 182, 212, 0.14) 100%
+);
+
+/* Repeat Gradient A */
+--tint-skills: linear-gradient(
+  165deg,
+  rgba(16, 185, 129, 0.22) 0%,
+  rgba(20, 184, 166, 0.14) 100%
+);
+
+/* Repeat Gradient B */
+--tint-contact: linear-gradient(
+  165deg,
+  rgba(34, 211, 238, 0.22) 0%,
+  rgba(6, 182, 212, 0.14) 100%
+);
+
+}
+
+html[data-theme='light'] {
+  /* Designed fresh for light — soft mint-cream layering, not an inverted dark */
+  --bg: linear-gradient(180deg, #f7faf8 0%, #eef6f1 55%, #e9f4ef 100%);
+  --bg-soft: #eef6f1;
+
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-bg-strong: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(6, 78, 59, 0.09);
+  --glass-border-strong: rgba(6, 78, 59, 0.17);
+
+  --surface: rgba(255, 255, 255, 0.55);
+  --surface-hover: rgba(255, 255, 255, 0.8);
+
+  --text-primary: #0f2a22;
+  --text-secondary: #3c584e;
+  --text-tertiary: #7c948b;
+
+  --text-accent-1: #047857;
+  --text-accent-2: #0f766e;
+  --text-accent-3: #0e7490;
+
+  --shadow-soft: 0 1px 2px rgba(15, 60, 50, 0.05), 0 20px 42px -20px rgba(15, 60, 50, 0.16);
+  --shadow-lift: 0 2px 4px rgba(15, 60, 50, 0.07), 0 30px 56px -20px rgba(15, 60, 50, 0.22);
+
+  --nav-scrim: rgba(247, 250, 248, 0.72);
+  --aurora-opacity: 0.16;
+  --grain-opacity: 0.02;
+
+ 
+/* background gradients for each section — subtle tinting to distinguish sections while staying on-brand */
+
+  /* Gradient A - Emerald → Teal */
+--tint-hero: linear-gradient(165deg, rgba(16, 185, 129, 0.28) 0%, rgba(20, 184, 166, 0.17) 100%);
+
+/* Gradient B - Cyan → Aqua */
+--tint-summary: linear-gradient(165deg, rgba(34, 211, 238, 0.27) 0%, rgba(6, 182, 212, 0.17) 100%);
+
+/* Repeat Gradient A */
+--tint-experience: linear-gradient(165deg, rgba(16, 185, 129, 0.28) 0%, rgba(20, 184, 166, 0.17) 100%);
+
+/* Repeat Gradient B */
+--tint-projects: linear-gradient(165deg, rgba(34, 211, 238, 0.27) 0%, rgba(6, 182, 212, 0.17) 100%);
+
+/* Repeat Gradient A */
+--tint-skills: linear-gradient(165deg, rgba(16, 185, 129, 0.28) 0%, rgba(20, 184, 166, 0.17) 100%);
+
+/* Repeat Gradient B */
+--tint-contact: linear-gradient(165deg, rgba(34, 211, 238, 0.27) 0%, rgba(6, 182, 212, 0.17) 100%);
+
+  color-scheme: light;
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background var(--transition-slow), color var(--transition-slow);
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  transition: color var(--transition-med);
+}
+
+p {
+  margin: 0;
+  color: var(--text-secondary);
+  transition: color var(--transition-med);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.28);
+  color: var(--text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 300;
+  background: var(--brand-gradient);
+  color: #fff;
+  padding: var(--space-3) var(--space-5);
+  border-radius: 0 0 var(--radius-sm) 0;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+section {
+  position: relative;
+  z-index: 0;
+  padding: var(--space-9) 0;
+  scroll-margin-top: var(--nav-height);
+  transition: background var(--transition-slow);
+}
+
+/* Per-section tinted backdrop — keeps sections visually distinguishable
+   while staying subtle and consistent with the shared brand palette. */
+#home::before,
+#summary::before,
+#experience::before,
+#projects::before,
+#skills::before,
+#contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  transition: background var(--transition-slow);
+}
+
+#home::before { background: var(--tint-hero); }
+#summary::before { background: var(--tint-summary); }
+#experience::before { background: var(--tint-experience); }
+#projects::before { background: var(--tint-projects); }
+#skills::before { background: var(--tint-skills); }
+#contact::before { background: var(--tint-contact); }
+
+.section-fallback {
+  min-height: 240px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: var(--text-accent-2);
+  margin-bottom: var(--space-4);
+  transition: color var(--transition-med);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand-gradient);
+}
+
+.section-heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: var(--space-3);
+}
+
+.section-subtext {
+  max-width: 620px;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+.section-head {
+  margin-bottom: var(--space-8);
+}
+
+.text-gradient {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ============================================================
+   GLASS CARD SYSTEM — the core visual identity
+   ============================================================ */
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  transition: border-color var(--transition-fast), transform var(--transition-fast),
+    box-shadow var(--transition-fast), background var(--transition-slow);
+}
+
+.glass:hover {
+  border-color: var(--glass-border-strong);
+  box-shadow: var(--shadow-lift), 0 0 0 1px rgba(13, 148, 136, 0.06),
+    0 40px 80px -32px rgba(8, 145, 178, 0.25);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: rgba(13, 148, 136, 0.13);
+  color: #5eead4;
+  border: 1px solid rgba(13, 148, 136, 0.2);
+  transition: background var(--transition-med), color var(--transition-med), border-color var(--transition-med);
+}
+
+html[data-theme='light'] .tag {
+  background: rgba(15, 118, 110, 0.08);
+  color: #0f766e;
+  border-color: rgba(15, 118, 110, 0.16);
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    background var(--transition-fast), border-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--brand-gradient);
+  color: #ffffff;
+  box-shadow: 0 14px 34px -14px rgba(13, 148, 136, 0.55);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px -16px rgba(13, 148, 136, 0.68);
+}
+
+.btn-secondary {
+  background: var(--glass-bg);
+  color: var(--text-primary);
+  border-color: var(--glass-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-hover);
+  border-color: var(--glass-border-strong);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: background var(--transition-fast), border-color var(--transition-fast),
+    transform var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-icon:hover {
+  background: var(--surface-hover);
+  border-color: var(--glass-border-strong);
+  transform: translateY(-2px);
+  color: var(--accent-warm);
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+  section {
+    padding: var(--space-8) 0;
+  }
+}
