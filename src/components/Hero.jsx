@@ -123,7 +123,7 @@ export default function Hero() {
             custom={6}
             variants={fadeUp}
           >
-            <a href="/resume.pdf" className="btn btn-primary" download>
+            <a href="/Rahul_Biradar_Full_Stack_Developer.pdf" className="btn btn-primary" download>
               <HiOutlineDownload size={18} />
               Download Resume
             </a>
