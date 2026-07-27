@@ -4,7 +4,7 @@ export const personal = {
   name: 'Rahul Biradar',
   role: 'Full Stack Developer',
   experienceBadge: '2+ Years Experience',
-  experience: '2.6 Years',
+  experience: '2.4 Years',
   company: 'Sanvima Solutions Private Limited',
   duration: 'April 2024 – June 2026',
   careerHighlights: [
@@ -21,7 +21,7 @@ export const personal = {
   ],
 }
 
-export const summary = `I'm a Full Stack Developer passionate about building scalable business applications that solve real-world challenges. Over the past 2.6 years, I've worked across ERP, Healthcare, and Education domains, developing enterprise web applications, admin panels, and REST APIs used in production environments.
+export const summary = `I'm a Full Stack Developer passionate about building scalable business applications that solve real-world challenges. Over the past 2.4 years, I've worked across ERP, Healthcare, and Education domains, developing enterprise web applications, admin panels, and REST APIs used in production environments.
 
 I enjoy transforming business requirements into reliable, user-friendly solutions using React.js, PHP, Slim Framework, CodeIgniter, and MySQL. From developing new features and optimizing databases to integrating APIs and maintaining live applications, I focus on writing clean, maintainable code that delivers long-term value.`
 
