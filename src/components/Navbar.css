@@ -143,11 +143,20 @@
   display: flex;
   flex-direction: column;
   padding: var(--space-4) var(--space-6) var(--space-6);
-  background: var(--nav-scrim);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  /* background: var(--nav-scrim);      these lines are commented out because they were causing issues with the mobile navbar background
+  backdrop-filter: blur(20px) saturate(160%);   these lined are replaceed with the following lines to fix the issue line 154 to 160
+  -webkit-backdrop-filter: blur(20px) saturate(160%); */   
   border-bottom: 1px solid var(--glass-border);
   box-shadow: var(--shadow-lift);
+}
+
+
+html[data-theme='light'] .navbar__mobile {
+  background: #ffffff;
+}
+
+html[data-theme='dark'] .navbar__mobile {
+  background: #071512;
 }
 
 .navbar__mobile-link {
