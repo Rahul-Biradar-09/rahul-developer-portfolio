@@ -2,7 +2,7 @@
 
 export const personal = {
   name: 'Rahul Biradar',
-  role: 'Full Stack Developer',
+  role: '',
   experienceBadge: '2+ Years Experience',
   experience: '2.4 Years',
   company: 'Sanvima Solutions Private Limited',
@@ -39,20 +39,20 @@ export const heroHighlights = [
 
 export const experience = [
   {
-    title: 'Senior Developer  (Full Stack)',
+    title: 'Junior Developer (Full Stack)',
     company: 'Sanvima Solutions Private Limited',
-    duration: 'April 2024 – August 2026',
+    duration: 'April 2024 – July 2026',
     responsibilities: [
-      'Promoted from Junior Developer to Senior Developer based on consistent performance.',
       'Developed and maintained enterprise web applications across ERP, Healthcare, and Education domains.',
-      'Built production-ready features and enhanced existing business modules.',
-      'Developed and integrated REST APIs using PHP Slim Framework.',
-      'Integrated React.js frontend applications with backend services and APIs.',
-      'Developed and enhanced admin panels using CodeIgniter 3 & 4.',
-      'Resolved production issues, fixed bugs, and optimized existing application features.',
-      'Optimized MySQL database queries to improve application performance.',
-      'Collaborated with clients to gather requirements and implement business solutions.',
-      'Led a team of three developers to deliver enterprise project features.',
+      'Delivered production-ready features and enhanced existing business modules based on evolving business requirements.',
+      'Built and enhanced secure admin panels using CodeIgniter 3 & 4 following the MVC architecture.',
+      'Designed, developed, and integrated REST APIs using PHP Slim Framework for seamless data communication.',
+      'Integrated React.js frontend applications with backend services and REST APIs to deliver responsive user experiences.',
+      'Implemented authentication and role-based access control (RBAC) across multiple user roles.',
+      'Resolved production issues, fixed critical bugs, and optimized existing application features to improve system reliability.',
+      'Optimized MySQL database queries and improved application performance through efficient data handling.',
+      'Collaborated directly with clients to gather business requirements and implement effective software solutions.',
+      'Led a team of three developers during the development and enhancement of the Alpha ERP project, ensuring timely feature delivery.',
     ],
   },
 ]
